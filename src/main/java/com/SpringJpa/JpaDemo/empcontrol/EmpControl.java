@@ -82,7 +82,44 @@ public class EmpControl {
         return list;
     }
 
-    
+    @GetMapping(value = "/findByNameLike")
+    List<Empolyee> findByNameLike(@RequestParam String name){
+        List<Empolyee> list=empRepo.findByNameLike(name);
+        return list;
+    }
+
+    @GetMapping(value = "/findByNameNotLike")
+    List<Empolyee> findByNameNotLike(@RequestParam String name){
+        List<Empolyee> list=empRepo.findByNameNotLike(name);
+        return list;
+    }
+    ///
+
+    @GetMapping(value = "/findByNameStartingWith")
+    List<Empolyee> findByNameStartingWith(@RequestParam String name){
+        List<Empolyee> list=empRepo.findByNameStartingWith(name);
+        return list;
+    }
+
+    @GetMapping(value = "/findByNameEndingWith")
+    List<Empolyee> findByNameEndingWith(@RequestParam String name){
+        List<Empolyee> list=empRepo.findByNameEndingWith(name);
+        return list;
+    }
+
+    @GetMapping(value = "/findByNameContaining")
+    List<Empolyee> findByNameContaining(@RequestParam String name){
+        List<Empolyee> list=empRepo.findByNameContaining(name);
+        return list;
+    }
+
+    @GetMapping(value = "/findByIdOrderByNameDesc")
+    List<Empolyee> findByIdOrderByNameDesc(@RequestParam Integer id){
+        List<Empolyee> list=empRepo.findByIdOrderByNameDesc(id);
+        return list;
+    }
+
+
 
 
 

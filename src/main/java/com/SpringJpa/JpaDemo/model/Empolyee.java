@@ -8,7 +8,7 @@ import javax.persistence.Id;
  */
 @Entity
 public class Empolyee {
-
+    
     @Id
     Integer id;
     String name;
@@ -46,7 +46,4 @@ public class Empolyee {
                 ", city='" + city + '\'' +
                 '}';
     }
-
-
-
 }

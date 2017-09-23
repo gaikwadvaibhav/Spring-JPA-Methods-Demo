@@ -27,6 +27,24 @@ public interface EmpRepo extends JpaRepository<Empolyee,Integer> {
 //
     List<Empolyee> findByIdBefore(Integer id);
 
+    List<Empolyee> findByNameLike(String name);
+
+    List<Empolyee> findByNameNotLike(String name);
+//
+    List<Empolyee> findByNameStartingWith(String name);
+
+    List<Empolyee> findByNameEndingWith(String name);
+
+    List<Empolyee> findByNameContaining(String name);
+
+    List<Empolyee> findByIdOrderByNameDesc(Integer id);
+
+
+
+
+
+
+
 
 
 
